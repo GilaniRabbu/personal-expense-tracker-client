@@ -1,4 +1,4 @@
-import CategoryCostCharts from "@/components/dashboard/CategoryCostCharts";
+import CategoryManager from "@/components/dashboard/CategoryManager";
 
 const page = () => {
   return (
@@ -13,7 +13,7 @@ const page = () => {
           insights to stay financially organized.
         </p>
       </div>
-      <CategoryCostCharts />
+      <CategoryManager />
     </div>
   );
 };
