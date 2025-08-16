@@ -168,9 +168,8 @@ const ExpenseManager = () => {
     }
   };
 
-  /* ---------- Render ---------- */
   return (
-    <div className="container mx-auto p-4">
+    <div className="container">
       <Card>
         <CardHeader>
           <CardTitle>Expenses Manager</CardTitle>
@@ -265,7 +264,7 @@ const ExpenseManager = () => {
                 </PopoverContent>
               </Popover>
             </div>
-            <Button type="submit">
+            <Button type="submit" className="cursor-pointer">
               {editingId ? "Update" : "Add"} Expense
             </Button>
           </form>
@@ -291,7 +290,7 @@ const ExpenseManager = () => {
                     <TableCell>{exp.title || "N/A"}</TableCell>
                     <TableCell>${(exp.amount || 0).toFixed(2)}</TableCell>
                     <TableCell>
-                      <Badge variant="secondary">
+                      <Badge variant="outline">
                         {exp.category?.name ||
                           categoryMap[exp.category?._id] ||
                           "N/A"}
@@ -304,6 +303,7 @@ const ExpenseManager = () => {
                       <Button
                         variant="ghost"
                         size="icon"
+                        className="cursor-pointer"
                         onClick={() => handleEdit(exp)}
                       >
                         <Edit className="h-4 w-4" />
@@ -311,6 +311,7 @@ const ExpenseManager = () => {
                       <Button
                         variant="ghost"
                         size="icon"
+                        className="cursor-pointer"
                         onClick={() => handleDelete(exp._id)}
                       >
                         <Trash className="h-4 w-4" />
