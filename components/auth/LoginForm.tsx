@@ -49,7 +49,7 @@ export default function LoginForm() {
 
   return (
     <section
-      className={`px-5 py-10 md:py-0 md:min-h-screen md:flex md:items-center md:justify-center`}
+      className={`px-5 py-20 md:py-0 md:min-h-screen md:flex md:items-center md:justify-center`}
     >
       <div className="w-full max-w-lg mx-auto shadow-lg p-8 rounded-md bg-white">
         <h2 className="text-3xl font-bold text-center mb-6 text-slate-800">
