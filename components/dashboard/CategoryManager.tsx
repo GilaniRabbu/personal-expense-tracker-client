@@ -118,8 +118,11 @@ const CategoryManager = () => {
               No categories found. Create one to get started!
             </div>
           ) : (
-            <Tabs defaultValue={categories[0]?.id || ""} className="w-full">
-              <TabsList className="flex flex-wrap">
+            <Tabs
+              defaultValue={categories[0]?.id || ""}
+              className="w-full overflow-x-auto"
+            >
+              <TabsList className="flex">
                 {categories.map((cat) => (
                   <TabsTrigger
                     key={cat.id}
